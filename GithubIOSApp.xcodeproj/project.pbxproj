@@ -19,6 +19,7 @@
 		CEDD15DB261B682A0073A284 /* ReposItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15DA261B682A0073A284 /* ReposItem.swift */; };
 		CEDD15E0261B69560073A284 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15DF261B69560073A284 /* ReposTableViewCell.swift */; };
 		CEDD15E4261B6B300073A284 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDD15E3261B6B300073A284 /* RepoTableViewCell.xib */; };
+		CEDD15E6261B6BC90073A284 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15E5261B6BC90073A284 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		CEDD15DA261B682A0073A284 /* ReposItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposItem.swift; sourceTree = "<group>"; };
 		CEDD15DF261B69560073A284 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
 		CEDD15E3261B6B300073A284 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		CEDD15E5261B6BC90073A284 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		CEDD15D6261B66CB0073A284 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD15E5261B6BC90073A284 /* Helper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				CEDD15B5261B63E80073A284 /* AppDelegate.swift in Sources */,
 				CEDD15DB261B682A0073A284 /* ReposItem.swift in Sources */,
 				CEDD15B7261B63E80073A284 /* SceneDelegate.swift in Sources */,
+				CEDD15E6261B6BC90073A284 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
