@@ -20,6 +20,8 @@
 		CEDD15E0261B69560073A284 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15DF261B69560073A284 /* ReposTableViewCell.swift */; };
 		CEDD15E4261B6B300073A284 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDD15E3261B6B300073A284 /* RepoTableViewCell.xib */; };
 		CEDD15E6261B6BC90073A284 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15E5261B6BC90073A284 /* Helper.swift */; };
+		CEDD15E8261B6C480073A284 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15E7261B6C480073A284 /* APIClient.swift */; };
+		CEDD15EA261B6C560073A284 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15E9261B6C560073A284 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		CEDD15DF261B69560073A284 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
 		CEDD15E3261B6B300073A284 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		CEDD15E5261B6BC90073A284 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		CEDD15E7261B6C480073A284 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		CEDD15E9261B6C560073A284 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +129,6 @@
 				CEDD15D6261B66CB0073A284 /* Utils */,
 				CEDD15B4261B63E80073A284 /* AppDelegate.swift */,
 				CEDD15B6261B63E80073A284 /* SceneDelegate.swift */,
-				CEDD15B8261B63E80073A284 /* ViewController.swift */,
 				CEDD15BA261B63E80073A284 /* Main.storyboard */,
 				CEDD15BD261B63EC0073A284 /* Assets.xcassets */,
 				CEDD15BF261B63EC0073A284 /* LaunchScreen.storyboard */,
@@ -154,6 +157,8 @@
 		CEDD15D7261B66D20073A284 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD15E7261B6C480073A284 /* APIClient.swift */,
+				CEDD15E9261B6C560073A284 /* Endpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 		CEDD15D9261B66E80073A284 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD15B8261B63E80073A284 /* ViewController.swift */,
 				CEDD15DC261B69090073A284 /* cells */,
 			);
 			path = Views;
@@ -353,6 +359,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDD15B9261B63E80073A284 /* ViewController.swift in Sources */,
+				CEDD15E8261B6C480073A284 /* APIClient.swift in Sources */,
+				CEDD15EA261B6C560073A284 /* Endpoint.swift in Sources */,
 				CEDD15E0261B69560073A284 /* ReposTableViewCell.swift in Sources */,
 				CEDD15B5261B63E80073A284 /* AppDelegate.swift in Sources */,
 				CEDD15DB261B682A0073A284 /* ReposItem.swift in Sources */,

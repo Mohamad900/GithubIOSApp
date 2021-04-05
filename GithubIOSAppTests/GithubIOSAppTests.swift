@@ -11,24 +11,78 @@ import XCTest
 
 class GithubIOSAppTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+   override func setUp() {
+           super.setUp()
+       }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+       override func tearDown() {
+           super.tearDown()
+       }
+       
+       func testInvalidDate() {
+           
+            var expectedResponse:[ReposItem]? = nil
+            let getReposEndPoint = EndpointCases.getReposData(page: 1, date: "2222-33-55")
+            let excpetion = self.expectation(description: "Network call failed.")
+            
+            APIClient.fetchReposData(endpoint: getReposEndPoint, completion: { (repos, error) in
+                     expectedResponse = repos
+                     excpetion.fulfill()
+            })
+            
+            waitForExpectations(timeout: 5, handler: nil)
+            XCTAssertNil(expectedResponse)
+         
+         }
+       
+       func testInvalidDateFormat() {
+                  
+          var expectedResponse:[ReposItem]? = nil
+          let getReposEndPoint = EndpointCases.getReposData(page: 1, date: "03-2021-05")
+          let excpetion = self.expectation(description: "Network call failed.")
+          
+           APIClient.fetchReposData(endpoint: getReposEndPoint, completion: { (repos, error) in
+                   expectedResponse = repos
+                   excpetion.fulfill()
+          })
+          
+          waitForExpectations(timeout: 5, handler: nil)
+           XCTAssertNil(expectedResponse)
+       
+       }
+       
+       func testEmptyListOfRepos_InavlidPageNumber() {
+              
+             var expectedResponse:[ReposItem]? = nil
+              let date = Helper.GetSubstractedTodayDate(days: 30)
+              let getReposEndPoint = EndpointCases.getReposData(page: -100, date: date)
+              let excpetion = self.expectation(description: "Network call failed.")
+                    
+              APIClient.fetchReposData(endpoint: getReposEndPoint, completion: { (repos, error) in
+                         expectedResponse = repos
+                         excpetion.fulfill()
+                })
+              
+              waitForExpectations(timeout: 5, handler: nil)
+              XCTAssertNotNil(expectedResponse)
+          
+          }
+       
+       func testHasRepos() {
+           
+           var expectedResponse:[ReposItem]? = nil
+           let date = Helper.GetSubstractedTodayDate(days: 30)
+           let getReposEndPoint = EndpointCases.getReposData(page: 1, date: date)
+           let excpetion = self.expectation(description: "Network call failed.")
+           
+           APIClient.fetchReposData(endpoint: getReposEndPoint, completion: { (repos, error) in
+                    expectedResponse = repos
+                    excpetion.fulfill()
+           })
+           
+           waitForExpectations(timeout: 5, handler: nil)
+           XCTAssertNotNil(expectedResponse)
+       
+       }
 
 }
