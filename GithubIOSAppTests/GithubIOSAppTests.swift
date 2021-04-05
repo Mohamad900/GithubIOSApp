@@ -2,7 +2,7 @@
 //  GithubIOSAppTests.swift
 //  GithubIOSAppTests
 //
-//  Created by user on 4/5/21.
+//  Created by Mohamad Abdallah on 4/5/21.
 //  Copyright © 2021 Abdallah. All rights reserved.
 //
 
@@ -19,7 +19,7 @@ class GithubIOSAppTests: XCTestCase {
            super.tearDown()
        }
        
-       func testInvalidDate() {
+    func testInvalidDate() {
            
             var expectedResponse:[ReposItem]? = nil
             let getReposEndPoint = EndpointCases.getReposData(page: 1, date: "2222-33-55")
