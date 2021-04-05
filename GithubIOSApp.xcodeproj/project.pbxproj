@@ -17,6 +17,8 @@
 		CEDD15C1261B63EC0073A284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDD15BF261B63EC0073A284 /* LaunchScreen.storyboard */; };
 		CEDD15CC261B63EC0073A284 /* GithubIOSAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15CB261B63EC0073A284 /* GithubIOSAppTests.swift */; };
 		CEDD15DB261B682A0073A284 /* ReposItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15DA261B682A0073A284 /* ReposItem.swift */; };
+		CEDD15E0261B69560073A284 /* ReposTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD15DF261B69560073A284 /* ReposTableViewCell.swift */; };
+		CEDD15E4261B6B300073A284 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDD15E3261B6B300073A284 /* RepoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		CEDD15CB261B63EC0073A284 /* GithubIOSAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubIOSAppTests.swift; sourceTree = "<group>"; };
 		CEDD15CD261B63EC0073A284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEDD15DA261B682A0073A284 /* ReposItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposItem.swift; sourceTree = "<group>"; };
+		CEDD15DF261B69560073A284 /* ReposTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposTableViewCell.swift; sourceTree = "<group>"; };
+		CEDD15E3261B6B300073A284 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +166,18 @@
 		CEDD15D9261B66E80073A284 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD15DC261B69090073A284 /* cells */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEDD15DC261B69090073A284 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEDD15E3261B6B300073A284 /* RepoTableViewCell.xib */,
+				CEDD15DF261B69560073A284 /* ReposTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +267,7 @@
 				CEDD15C1261B63EC0073A284 /* LaunchScreen.storyboard in Resources */,
 				CEDD15BE261B63EC0073A284 /* Assets.xcassets in Resources */,
 				CEDD15BC261B63E80073A284 /* Main.storyboard in Resources */,
+				CEDD15E4261B6B300073A284 /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDD15B9261B63E80073A284 /* ViewController.swift in Sources */,
+				CEDD15E0261B69560073A284 /* ReposTableViewCell.swift in Sources */,
 				CEDD15B5261B63E80073A284 /* AppDelegate.swift in Sources */,
 				CEDD15DB261B682A0073A284 /* ReposItem.swift in Sources */,
 				CEDD15B7261B63E80073A284 /* SceneDelegate.swift in Sources */,
