@@ -33,8 +33,6 @@ iOS coding challenge
 # How to run
 
 1. Clone this repo
-2. Open shell window and navigate to project folder
-3. Run pod install
-4. Open GithubIOSApp.xcworkspace and run the project on simulator
+2. Open GithubIOSApp.xcworkspace and run the project on simulator
 
 
