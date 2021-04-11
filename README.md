@@ -5,7 +5,7 @@ Built using XCode 11.3.1 (Swift 5)
 
 # Why I am building this?
 
-1. iOS coding challenge 
+iOS coding challenge 
 
 # Project Strurcture
 
