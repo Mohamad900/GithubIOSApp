@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  GithubIOSApp
 //
-//  Created by user on 4/5/21.
+//  Created by Mohamad Abdallah on 4/5/21.
 //  Copyright © 2021 Abdallah. All rights reserved.
 //
 

@@ -35,4 +35,22 @@ class Helper{
        })
         return urlRequest
     }
+    
+    static func numberFormater(_ txt: String) -> String {
+           var result = ""
+           let value = Double(txt.replacingOccurrences(of: ",", with: "")) ?? 0
+           
+           if value < 1000 {
+               result = txt
+           } else if value < 1000000 {
+               result = String(format: "%0.1f" , value/1000) + " K"
+           } else if value < 1000000000 {
+               result = String(format: "%0.1f" , value/1000000) + " M"
+           } else if value < 1000000000000 {
+               result = String(format: "%0.1f" , value/1000000000) + " B"
+           }
+           
+           return result
+       }
+    
 }

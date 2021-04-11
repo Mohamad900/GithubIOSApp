@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     let refreshControl = UIRefreshControl() // -> For pull to refresh
-    var page = 1
+    var page = 1 // default page
     var reposData = [ReposItem]()
     
     override func viewDidLoad() {
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         refreshControl.addTarget(self, action: #selector(refreshReposData), for: .valueChanged)
         
-        fetchReposData()
+        fetchReposData() //Get repos from github
     }
     
     func fetchReposData(){
@@ -49,11 +49,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let date = Helper.GetSubstractedTodayDate(days: 30)
         let getReposEndPoint = EndpointCases.getReposData(page: self.page, date: date)
         
-        KRProgressHUD.show()
+        KRProgressHUD.show() // show loader
 
         APIClient.fetchReposData(endpoint: getReposEndPoint, completion: { (repos, error) in
             
-            if let repos = repos{
+            if let repos = repos{ // unwrap + check if != nil
                 
                 self.reposData.append(contentsOf: repos)
                 self.tableView.reloadData()
@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    @objc func refreshReposData(){ // -> remove all data , reload table , reGet data
+    @objc func refreshReposData(){ // -> remove all data , reload table , get data
         page = 1
         reposData.removeAll()
         tableView.reloadData()

@@ -50,7 +50,7 @@ class APIClient{
                               reposData.append(item)
                             }
                         
-                                completion(reposData,nil)
+                                completion(reposData,nil) // callback fct
                             
                       }
                       else {

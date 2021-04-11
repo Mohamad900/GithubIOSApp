@@ -47,10 +47,10 @@ class RepoTableViewCell: UITableViewCell {
             labelName.text = data.name
             labelDesc.text = data.description
             
-            labelStar.text = numberFormater(data.stargazers_count)
-            labelIssues.text = numberFormater(data.open_issues)
+            labelStar.text = "Stars: " + Helper.numberFormater(data.stargazers_count)
+            labelIssues.text = "Issues: " + Helper.numberFormater(data.open_issues)
             
-            labelSubmitBy.text = "Updt: " + getDuration(data.updated_at) + " by " + data.owner
+            labelSubmitBy.text = "Submitted " + getDuration(data.created_at) + " by " + data.owner
             
             imgRepo.image = nil
             if data.image == nil {
@@ -65,24 +65,6 @@ class RepoTableViewCell: UITableViewCell {
                 self.imgRepo.image = data.image
             }
         }
-    }
-    
-    
-    func numberFormater(_ txt: String) -> String {
-        var result = ""
-        let value = Double(txt.replacingOccurrences(of: ",", with: "")) ?? 0
-        
-        if value < 1000 {
-            result = txt
-        } else if value < 1000000 {
-            result = String(format: "%0.1f" , value/1000) + " K"
-        } else if value < 1000000000 {
-            result = String(format: "%0.1f" , value/1000000) + " M"
-        } else if value < 1000000000000 {
-            result = String(format: "%0.1f" , value/1000000000) + " B"
-        }
-        
-        return result
     }
     
     
